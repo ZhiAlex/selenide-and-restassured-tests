@@ -16,7 +16,7 @@ public class CartPage {
             updateCartButton = $(name("updatecart")),
             cartEmptyText = $(".order-summary-content");
 
-    private ElementsCollection itemCheckbox = $$(".remove-from-cart input");
+    private ElementsCollection itemsCheckbox = $$(".remove-from-cart input");
 
     public CartPage setAllCheckbox() {
         for (SelenideElement checkbox : itemCheckbox) {
