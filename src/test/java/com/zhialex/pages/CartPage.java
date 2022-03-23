@@ -19,7 +19,7 @@ public class CartPage {
     private ElementsCollection checkboxes = $$(".remove-from-cart input");
 
     public CartPage setAllCheckbox() {
-        for (SelenideElement checkbox : itemCheckbox) {
+        for (SelenideElement checkbox : checkboxes) {
             checkbox.click();
         }
         return this;

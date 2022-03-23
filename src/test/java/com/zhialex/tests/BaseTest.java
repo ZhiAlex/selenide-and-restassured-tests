@@ -1,7 +1,10 @@
 package com.zhialex.tests;
 
 import com.zhialex.pages.CartPage;
+import io.restassured.RestAssured;
+import org.junit.jupiter.api.BeforeAll;
 
+import static com.zhialex.helpers.CustomAllureListener.withCustomTemplates;
 import static io.restassured.RestAssured.given;
 
 public class BaseTest {
@@ -17,5 +20,10 @@ public class BaseTest {
                 .then()
                 .extract()
                 .cookie("Nop.customer");
+    }
+
+    @BeforeAll
+    public static void beforeAll() {
+        RestAssured.filters(withCustomTemplates());
     }
 }
